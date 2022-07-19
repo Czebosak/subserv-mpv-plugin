@@ -257,7 +257,7 @@ void *server_start(void *arg) {
     int addrlen = sizeof(address);
     
     address.sin_family = AF_INET; 
-    address.sin_addr.s_addr = INADDR_ANY; 
+    address.sin_addr.s_addr = htonl(INADDR_ANY);
     address.sin_port = htons(PORT);
     
     int opt = 1;
@@ -268,7 +268,7 @@ void *server_start(void *arg) {
         return 0;
     }
         // Forcefully attaching socket to the port 8080 
-    if (setsockopt(sock_fd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt))) 
+    if (setsockopt(sock_fd, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt))) 
     { 
         printf("couldn't open socket\n");
         return 0;
