@@ -5,7 +5,16 @@ STRINGIFY(
 <style type="text/css" media="screen">
 
 body {
+    --even-color: #313244; /* Surface 0 */
+    --base-color: #1e1e2e;
+    --text-color: #cdd6f4;
+    background-color: var(--base-color);
     margin: 0px;
+}
+
+div {
+    font-family: sans-serif;
+    color: var(--text-color);
 }
 
 div.old-subs {
@@ -19,16 +28,16 @@ div.new-subs {
     text-align: center;
     width: 99%;
     top: 90%;
-    font-size: x-large; 
+    font-size: 2rem; 
 }
 
 div.old-sub-el {
-    min-height: 5px;
-    padding: 5px;
+    padding: 0.6rem;
+    font-size: 1.2rem;
 }
 
 div.old-sub-el-even {
-    background-color: aliceblue;
+    background-color: var(--even-color);
 }
 
 div.old-sub-el-odd {
