@@ -1,6 +1,8 @@
 # subserv-mpv-plugin
 Send subtitles displayed by mpv to your web-browser.
 
+This fork adds a makefile for convenience and changes some stylistic choices according to my tastes. Uses [Catppuccin](https://catppuccin.com) color pallete
+
 A plugin for https://mpv.io/
 the mpv video player.
 
@@ -16,12 +18,6 @@ With this plugin and the help of yomichan (https://foosoft.net/projects/yomichan
 # Installation:
 to compile and install it basically run:
 ```
-gcc -o ~/.config/mpv/scripts/subserv.so subserv.c -I . -shared -fPIC
+make
 ```
-mpvs 'client.h' needs to be included.
-You can get it from https://raw.githubusercontent.com/mpv-player/mpv/master/libmpv/client.h
-Just save it in the directory you are compiling it from.
-
 To access the site, just go to 127.0.0.1:8080 (if you want to change the port, edit the port definition in the source).
-
-If you have any questions, feel free to send them to kyouko@channel.moe
